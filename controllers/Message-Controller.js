@@ -83,9 +83,10 @@ const SentMessage = async(req,res,next) =>{
               console.log(error);
             } else {
               console.log('Email sent: ' + info.response);
-              return res.status(200).json({message:"Successfully sent message"})
             }
           });
+          
+          return res.status(200).json({message:"successful"})
             
     } catch (error) {
         
