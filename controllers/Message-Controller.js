@@ -62,7 +62,7 @@ const SentMessage = async(req,res,next) =>{
     const {email,id,message} = req.body
 
     try {
-        const respon = await User.findOneAndRemove({_id:id}) 
+        const respon = await Message.findOneAndRemove({_id:id}) 
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
