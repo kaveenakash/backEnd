@@ -13,6 +13,7 @@ const messageRoutes = require('./routes/message-routes')
 const adminRoutes = require('./routes/admin-routes')
 const presentationRoutes = require('./routes/presentation-routes')
 const downloadRoutes = require('./routes/download-routes')
+const newsRoutes = require('./routes/news-routes')
 const HttpError = require('./models/http-error');
 
 app.use(cors())
@@ -38,6 +39,8 @@ app.use('/api/downloads',downloadRoutes)
 
 //Admin
 app.use('/api/admin',adminRoutes)
+
+//News Routes
 
 app.use((req,res,next) =>{
     const error = new HttpError('could not find this route',404)

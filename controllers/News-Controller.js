@@ -34,7 +34,7 @@ const SaveNews = async (req,res,next) =>{
 
 
 
-const getAllNews = async(req,res,next) =>{
+const GetAllNews = async(req,res,next) =>{
 
     try {
         const news = await News.find({})
@@ -49,7 +49,7 @@ const getAllNews = async(req,res,next) =>{
 
 
 
-module.export = {
+module.exports = {
     SaveNews,
-    getAllNews
+    GetAllNews
 }
