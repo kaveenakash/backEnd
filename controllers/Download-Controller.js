@@ -39,7 +39,24 @@ const GetAllTemplates = async(req,res,next) =>{
 }
 
 
+
+const DeleteTemplate = async(req,res,next) =>{
+    const {id} = req.body
+   
+    try {
+      const response = await User.findOneAndRemove({_id:id})
+      return res.status(200).json(response)
+    } catch (err) {
+      const error = new HttpError("Unexpected Error Occured", 503);
+      return next(error);
+    }
+ 
+  }
+  
+
+
 module.exports = {
     AddTemplate,
-    GetAllTemplates
+    GetAllTemplates,
+    DeleteTemplate
 }
