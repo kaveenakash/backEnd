@@ -73,8 +73,8 @@ const SentMessage = async(req,res,next) =>{
           
           var mailOptions = {
             from: 'icafsliit2021@gmail.com',
-            to: `${email}`,
-            subject: 'ICFF Organize Commity',
+            to: 'kaveenakash1998@gmail.com',
+            subject: 'Registration Problem',
             text: `${message}`
           };
           
