@@ -11,7 +11,7 @@ const fileUpload = require('../middleware/file-upload')
 
 router.post('/admin-add-template',fileUpload.single('document'),downloadController.AddTemplate)
 router.get('/all-templates',downloadController.GetAllTemplates)
-router.delete('/template-delete',downloadController.DeleteTemplate)
+router.post('/template-delete',downloadController.DeleteTemplate)
 
 //This route below routes check is available token
 router.use(checkAuth)
