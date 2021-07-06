@@ -59,13 +59,13 @@ app.use((error,req,res,next) =>{
     res.json({message:error.message || 'An unknown error occured'})
 })
 
-
+const port = process.env.PORT || 9090
 
 mongoose
 .connect('mongodb+srv://ICAF_admin:ICAF_123@icaf.w04n0.mongodb.net/ICAF?retryWrites=true&w=majority',{useUnifiedTopology:true,useCreateIndex:true,useNewUrlParser:true,useFindAndModify:true})
 .then(() =>{
     console.log('Database Estabilished')
-    app.listen(process.env.port,() =>{
+    app.listen(port ,() =>{
         console.log('Server Started ',9090)
     })
 })
